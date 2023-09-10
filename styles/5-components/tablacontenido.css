@@ -1,0 +1,52 @@
+.toc {
+  flex-grow: 1;
+  display: block;
+  position: sticky;
+  top: 96px;
+  background-color: var(--background);
+
+  display: flex;
+  width: 224px;
+  padding: 0px 16px 0px 0px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: var(--spacing-2, 8px);
+  margin-top: 84px;
+}
+
+.toc__title {
+  color: var(--muted-foreground);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  animation: deslizamientoDerToc 2s ease-in 0.1s;
+  /* transition: transform 0.6s cubic-bezier(0.7, 0, 0.84, 0); */
+}
+
+
+
+.toc__links {
+  /* text-sm/leading-6/medium */
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  color: var(--foreground);
+  text-decoration: none;
+  line-height: 24px; /* 171.429% */
+  list-style: none;
+}
+
+@media (min-width: calc(80rem + 4rem)) {
+  /* media query ajustada para contemplar paddings y evitar 2 filas de testimonios */
+  .toc {
+    max-width: unset;
+  }
+}
+/* Agrega una regla @media para ocultar .toc en pantallas pequeñas */
+@media (max-width: 80rem) {
+  .toc {
+    display: none;
+  }
+}

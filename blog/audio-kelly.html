@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Codificable - Blog: Elemento Audio</title>
+  <link rel="stylesheet" href="/styles/index.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600&family=Inter:wght@400;500;600;700&family=Source+Code+Pro:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <div class="pancake-stack">
+    <header class="header container">
+      <h1 class="header__logo"><a href="/index.html">Codificable</a></h1>
+      <nav class="header__navigation navigation">
+        <ul>
+          <li><a href="/blog/index.html">Blog</a></li>
+          <li><a href="#">Sobre nosotros</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <button class="button button--sm">Login</button>
+      </div>
+      <button class="header__menu-icon button button--icon button--outline">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M2.66663 8H13.3333M2.66663 4H13.3333M2.66663 12H13.3333" stroke="currentColor" stroke-width="1.33"
+            stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+    </header>
+
+    <main>
+      <div class="section ">
+        <div class="container2">
+          <!-- container -->
+            <!-- indice -->
+            <div class="toc">
+              <p class="toc__title">En este artículo:</p>
+              <ul class="toc__links">
+                <li
+                  class="content__section"
+                  style="animation: deslizamientoDerToc 1s ease-in 0.2s"
+                >
+                  <a class="toc__links" href="#src">El atributo src</a>
+                </li>
+                <li
+                  class="content__section"
+                  style="animation: deslizamientoDerToc 1s ease-in 0.3s"
+                >
+                  <a class="toc__links" href="#atributos"
+                    >Atributos de control</a
+                  >
+                </li>
+                <li
+                  class="content__section"
+                  style="animation: deslizamientoDerToc 1s ease-in 0.4s"
+                >
+                  <a class="toc__links" href="#precarga"
+                    >Precarga de audio</a
+                  >
+                </li>
+                <li
+                  class="content__section"
+                  style="animation: deslizamientoDerToc 1s ease-in 0.5s"
+                >
+                  <a class="toc__links" href="#fallbacks"
+                    >Audios con fallbacks o extras</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <article class="article scrollable " id="article" >
+              <header class="article__header">
+                <div class="article-metadata">
+                  <span class="article-metadata__date">26 Agosto 2023</span>
+                  <span class="article-metadata__tag">Principiante</span>
+                </div>
+                <div class="author">
+                  <img src="/assets/images/profilek.jpeg" alt="Kelly Rodriguez" width="320" height="480"
+                    class="author__avatar" />
+                  <div class="author__info">
+                    <strong>Kelly Rodriguez</strong>
+                    <span>Full stack developer-Trainer</span>
+                  </div>
+                </div>
+              </header>
+              <div class="content">
+                <h1>Conoce el elemento &lt;audio&gt; de HTML</h1>
+                <img src="/assets/images/photo.png" alt="Phone taking picture of meal" width="1344" height="896" />
+                <figure>
+                  <audio controls>
+                    <source src="https://drive.google.com/uc?export=download&id=1N9KPtxF-4BDvpVeFU76N-XFpQHH6dgN7"
+                      type="audio/mpeg" />
+                    Tu navegador no soporta la reproducción de audio.
+                  </audio>
+                </figure>
+                <p>
+                  El elemento <code>&lt;audio&gt;</code> de HTML es una
+                  herramienta esencial para enriquecer la experiencia de usuario
+                  en tu sitio web al permitirte incorporar archivos de audio,
+                  música, efectos de sonido y más. A través de este artículo,
+                  exploraremos en profundidad cómo utilizar el elemento
+                  <code>&lt;audio&gt;</code>, sus atributos, eventos y mejores
+                  prácticas.
+                </p>
+                <h2>
+                  La etiqueta &lt;audio&gt; tiene atributos que podemos
+                  utilizar:
+                </h2>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Atributo</th>
+                      <th>Descripción</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>src</strong></td>
+                      <td>
+                        Audio a reproducir. Obligatoria si no contiene etiquetas
+                        <code>&lt;source&gt;</code>.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><strong>preload</strong></td>
+                      <td>Indica como realizar la precarga del audio.</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <h2 id="src" class="scrollable ">El atributo src</h2>
+                <p>
+                  En primer ejemplo muy básico para colocar un audio en nuestra
+                  página web:
+                </p>
+                <pre><code>&lt;audio src="audio.mp3"&gt;&lt;/audio&gt;</code></pre>
+
+                <p>
+                  Sin embargo esto no mostrará nada visualmente, ni reproducirá
+                  ningún sonido. Realmente, el audio está ahí, pero no le hemos
+                  indicado el atributo controls para que muestre los controles y
+                  que el usuario pueda ver que se trata de un archivo de audio
+                  para reproducirlo pulsando el botón «play». Al no haberle
+                  colocado tampoco el atributo autoplay, no empezará a
+                  reproducir el sonido de forma automática.
+                </p>
+                <h3 id="atributos" class="scrollable ">Atributos de control</h3>
+                <p>
+                  De la misma forma que las etiquetas &lt;video&gt;, a las
+                  etiquetas &lt;audio&gt; se les puede indicar atributos para
+                  activar o desactivar características. Simplemente añadiendo el
+                  atributo (sin valor asociado) activaremos la característica en
+                  cuestión.
+                </p>
+                <h4>Los atributos son los siguientes:</h4>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Atributo</th>
+                      <th>Descripción</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>lopp</strong></td>
+                      <td>
+                        Establece que el audio se repita al acabar (modo bucle).
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><strong>muted</strong></td>
+                      <td>Establece el audio como muteado (silenciado).</td>
+                    </tr>
+                    <tr>
+                      <td><strong>controls</strong></td>
+                      <td>
+                        Muestra los controles de reproducción. Por defecto no se
+                        muestran.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><strong>autoplay</strong></td>
+                      <td>
+                        Comienza a reproducir el audio automáticamente al cargar
+                        la página.
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <h4>Veamos un ejemplo real aplicado con estos atributos:</h4>
+                <pre><code>&lt;audio src="audio.mp3" controls autoplay loop&gt;&lt;/audio&gt;</code></pre>
+
+                <p>
+                  Hemos cargado un audio en formato .mp3. Se mostrará con los
+                  controles de reproducción (play, duración, volumen, etc...) y
+                  reproducirá el sonido de forma automática. Una vez termine el
+                  audio, volverá a empezar, ya que está en modo bucle..
+                </p>
+
+                <h2 id ="precarga" class="scrollable ">Precarga de audio</h2>
+                <p>
+                  Utilizando el atributo preload podemos indicar al navegador el
+                  comportamiento de descarga anticipada que queremos realizar
+                  con el archivo de audio. Por ejemplo, observa este fragmento
+                  de código:
+                </p>
+                <pre><code>&lt;audio src="audio.ogg" preload="none"&gt;&lt;/audio&gt;</code></pre>
+                <p>
+                  El archivo audio.ogg empezará a descargarse sólo cuando el
+                  usuario pulse en el botón Play de los controles de
+                  reproducción,ya que hemos establecido none en el atributo
+                  preload, que indica que no precargue el archivo.
+                </p>
+                <h4>
+                  Los valores que puede tomar el atributo preload son los
+                  siguientes:
+                </h4>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Valor</th>
+                      <th>Descripción</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>auto</strong></td>
+                      <td>
+                        Valor por defecto. EL navegador decide si debe descargar
+                        el audio de forma anticipada o no.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><strong>none</strong></td>
+                      <td>
+                        Se le indica al navegador que no descargue el audio
+                        hasta que se pulse el botón de pla
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><strong>metadata</strong></td>
+                      <td>
+                        Se le indica al navegador que descargue los metadatos
+                        del audio, pero no el audio en sí.
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <h3>Formatos de audio</h3>
+                <p>
+                  Los archivos de audio estan codificados mediante un códec
+                  específico, y es importante conocer estos detalles para saber
+                  que formatos están soportados por los diferentes navegadores.
+                </p>
+                <blockquote class="blockquote" cite="https://www.lawebera.es/diseno-web-html-5/audio-con-htlm5.php">
+                  <em>Por suerte, el elemento audio ya es reconocido por la
+                    mayoría de los navegadores más usuales. A pesar de ello, no
+                    todos manejan los mismos formatos, por lo cual es una buena
+                    idea presentar la misma pieza de sonido en varias
+                    modalidades.</em>
+                </blockquote>
+                <h4>
+                  A continuación tenemos un listado de los formatos/codecs de
+                  audio más conocidos y utilizados:
+                </h4>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Formato</th>
+                      <th>Codec utilizado</th>
+                      <th>Características</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <a href="https://www.iis.fraunhofer.de/en/ff/amm/consumer-electronics/mp3.html"
+                          target="_blank">MP3</a>
+                      </td>
+                      <td>MPEG Layer-3</td>
+                      <td>Buena calidad.</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="http://www.iis.fraunhofer.de/en/ff/amm/prod/audiocodec/audiocodecs/aaclc.html"
+                          target="_blank">AAC</a>
+                      </td>
+                      <td>Advanced Audio Coding</td>
+                      <td>Mejora el MP3. Usado como audio en MP4.</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="http://www.vorbis.com/" target="_blank">OGG</a>
+                      </td>
+                      <td>Ogg Vorbis</td>
+                      <td>Buena calidad. Alternativa libre a MP3.</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="https://www.opus-codec.org/" target="_blank">Opus</a>
+                      </td>
+                      <td>Opus</td>
+                      <td>Buena calidad. Alternativa libre a MP3.</td>
+                    </tr>
+                    <tr>
+                      <td><a href="https://xiph.org/flac/">FLAC</a></td>
+                      <td>FLAC Audio Lossless</td>
+                      <td>
+                        Muy buena calidad (sin pérdidas). Tamaño superior.
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <h2 id="fallbacks" class="scrollable ">Audios con fallbacks o extras</h2>
+                <p>
+                  La etiqueta &lt;audio&gt; también puede actuar como etiqueta
+                  contenedora e incluir varias etiquetas HTML para dotar de
+                  mayor compatibilidad, o capacidades adicionales.
+                </p>
+                <h4>
+                  Las etiquetas que podemos indicar en el interior de una
+                  etiqueta &lt;audio&gt; son las siguientes:
+                </h4>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Etiqueta</th>
+                      <th>Descripción</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>&lt;source&gt;</strong></td>
+                      <td>
+                        Establece un archivo de audio principal o alternativo.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><strong>&lt;track&gt;</strong></td>
+                      <td>
+                        Establece un archivo de subtítulos principal o
+                        alternativo.
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p>
+                  Las etiquetas de subtítulos &lt;track&gt; las veremos en el
+                  próximo artículo. Veamos ahora, un ejemplo donde utilizaríamos
+                  una etiqueta &lt;audio&gt; con varias alternativas
+                  establecidas con etiquetas
+                  <source />
+                  para proporcionar mayor compatibilidad con otros navegadores y
+                  navegadores antiguos que no soporten ciertos formatos:
+                </p>
+                <pre><code>&lt;audio&gt;
+  &lt;source src="audio.opus"&gt;
+  &lt;source src="audio.ogg"&gt;
+  &lt;source src="audio.mp3"&gt;
+&lt;/audio&gt;</code></pre>
+                <p>
+                  En este ejemplo, observa que no hemos establecido el atributo
+                  <strong>src</strong> en el elemento &lt;audio&gt; contenedor,
+                  sino en cada una de las etiquetas &lt;source&gt; de su
+                  interior. Ocurrirá lo siguiente:
+                </p>
+                <ol>
+                  <li>
+                    El navegador intentará reproducir el archivo de audio en
+                    formato.<span class="highlight">opus</span>.
+                  </li>
+                  <li>
+                    Si no lo soporta, intentará reproducir el formato.
+                    <span class="highlight">ogg vorbis</span>.
+                  </li>
+                  <li>
+                    Si no lo soporta, intentará reproducir el formato.<span class="highlight">mp3</span>.
+                  </li>
+                </ol>
+                <p>
+                  De esta forma, podemos establecer varias opciones para
+                  aprovechar los formatos modernos, y en caso que no estén
+                  soportados, utilizar formatos más antiguos o tradicionales.
+                </p>
+              </div>
+              <div class="back-to-top__sticky">
+                <div class="back-to-top__1">
+                  <a class="back-to-top" href="#article">
+                    <svg
+                      xmlns="http:www.we.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                    >
+                      <path
+                        d="M15 12.5L10 7.5L5 12.5"
+                        stroke="#171717"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    top</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+    </main>
+
+    <footer class="container footer">
+      <ul class="social-links">
+        <li>
+          <a href="#"><img src="/assets/icons/facebook.svg" alt="Facebook icon" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="/assets/icons/linkedin.svg" alt="LinkedIn icon" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="/assets/icons/twitter.svg" alt="Twitter icon" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="/assets/icons/github.svg" alt="GitHub icon" /></a>
+        </li>
+      </ul>
+      <small>&copy; 2023 Codificable - Todos los derechos reservados</small>
+    </footer>
+  </div>
+</body>
+
+</html>

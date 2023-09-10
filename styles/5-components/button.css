@@ -1,0 +1,134 @@
+/* Button */
+
+/* Default (primary) */
+
+.button {
+  display: inline-flex;
+  height: 2.5rem;
+  padding: var(--spacing-2) var(--spacing-4);
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-2);
+  border: 1px solid transparent;
+  border-radius: var(--rounded-md);
+  background-color: var(--primary);
+  cursor: pointer;
+
+  font-size: var(--font-sm);
+  color: var(--primary-foreground);
+  line-height: var(--leading-5);
+  font-weight: 500;
+
+  transition: transform 250ms, cubic-bezier(0.34, 1.56, 0.64, 1);
+  
+}
+
+.button:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-15%) ;
+}
+
+.button:active {
+  background-color: var(--primary-active);
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Secondary */
+
+.button--secondary {
+  background-color: var(--secondary);
+  color: var(--secondary-foreground);
+}
+
+.button--secondary:hover {
+  background-color: var(--secondary-hover);
+}
+
+.button--secondary:active {
+  background-color: var(--secondary-active);
+}
+
+/* Outline */
+
+.button--outline {
+  border-color: var(--border);
+  background-color: var(--background);
+  color: var(--secondary-foreground);
+}
+
+.button--outline:hover {
+  background-color: var(--background-hover);
+}
+
+.button--outline:active {
+  background-color: var(--background-active);
+}
+
+/* Sizes */
+
+.button--sm {
+  height: 2.25rem;
+  padding: var(--spacing-2) var(--spacing-3);
+}
+
+.button--lg {
+  height: 2.75rem;
+  padding: var(--spacing-2) var(--spacing-8);
+}
+
+.button--icon {
+  height: 2.5rem;
+  width: 2.5rem;
+  padding: 0;
+}
+
+.back-to-top {
+  display: flex;
+  flex-direction: column;
+  width: var(--spacing-12);
+  height: var(--spacing-12);
+  padding: var(--spacing-1_5) var(--spacing-3_5);
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid transparent;
+  border-radius: var(--rounded-3xl);
+  background-color: var(--muted);
+  text-decoration: none;
+  font-size: var(--font-xs);
+  font-weight: 400;
+  color: var(--foreground);
+  line-height: var(--font-base);
+}
+
+.back-to-top__sticky {
+  position: sticky;
+  bottom: 16px;
+  margin-left: auto;
+  animation: deslizar-entrada-Y 1000ms;
+  animation-timing-function: ease-in;
+  justify-items: center;
+  display: grid;
+  height: 48px;
+  width: 48px;
+  top: 1rem;
+}
+
+/* viedo como aplicar la animacion  */
+.back-to-top__1:hover {
+  animation: crecerYReducir 0.5s;
+  animation-timing-function: ease;
+  background-color: var(--violet-600);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

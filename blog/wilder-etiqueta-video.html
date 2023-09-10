@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Codificable - Blog: Conoce la etiqueta &lt;video&gt; en HTML</title>
+    <link rel="stylesheet" href="/styles/index.css" />
+  </head>
+  <body>
+    <div class="pancake-stack">
+      <header class="header container">
+        <h1 class="header__logo"><a href="/index.html">Codificable</a></h1>
+        <nav class="header__navigation navigation">
+          <ul>
+            <li><a href="/blog/index.html">Blog</a></li>
+            <li><a href="#">Sobre nosotros</a></li>
+          </ul>
+        </nav>
+        <div class="header__actions">
+          <button class="button button--sm">Login</button>
+        </div>
+        <button class="header__menu-icon button button--icon button--outline">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+          >
+            <path
+              d="M2.66663 8H13.3333M2.66663 4H13.3333M2.66663 12H13.3333"
+              stroke="currentColor"
+              stroke-width="1.33"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </header>
+
+      <main>
+        <div class="section">
+          <div class="container2">
+            
+            <div class="toc ">
+              <p class="toc__title">En este artículo:</p>
+              <ul class="toc__links">
+                <li class="content__section" style="animation: deslizamientoDerToc 1s ease-in 0.5s"><a  class="toc__links " href="#etiquetavideo">¿Qué es la etiqueta &lt;video&gt;?</a></li>
+                <li class="content__section" style="animation: deslizamientoDerToc 1s ease-in 0.5s"><a class="toc__links" href="#sintaxisbasica">Sintaxis Basica</a></li>
+                <li class="content__section" style="animation: deslizamientoDerToc 1s ease-in 0.5s"><a class="toc__links" href="#atributos">Atributos de control</a></li>
+                <li class="content__section" style="animation: deslizamientoDerToc 1s ease-in 0.5s"><a class="toc__links" href="#audio">Resumen en audio</a></li>
+              </ul>
+            </div>
+
+            <article class="article scrollable " id="article">
+              <header class="article__header">
+                <div class="article-metadata">
+                  <span class="article-metadata__date">26 Julio 2023</span>
+                  <span class="article-metadata__tag">Principiante</span>
+                </div>
+                <div class="author">
+                  <img
+                    src="/assets/images/profilew.jpg"
+                    alt="Wilder Castillo Avatar"
+                    width="320"
+                    height="480"
+                    class="author__avatar"
+                  />
+                  <div class="author__info">
+                    <strong class="author_name">Wilder Castillo</strong>
+                    <span>Full-stack Developer - Trainee</span>
+                  </div>
+                </div>
+              </header>
+              <div class="content">
+                <h1>Conoce la etiqueta &lt;video&gt; en HTML</h1>
+                <img class="content__section"
+                  src="/assets/images/etiqueta-video-html5-wilder.jpg"
+                  alt="Laptop con imagen de la etiqueta video"
+                  width="1344"
+                  height="896"
+                />
+                <p>
+                  Si alguna vez te has preguntado cómo se construyen las páginas
+                  web, estás en el lugar correcto. En este artículo, te
+                  introduciremos a los fundamentos de HTML, el lenguaje de
+                  marcado que da vida a las páginas web. Así que prepárate para
+                  explorar un mundo emocionante y creativo.
+                </p>
+                <h2 id="etiquetavideo" class="scrollable ">¿Qué es la etiqueta &lt;video&gt;?</h2>
+                <p>
+                  La etiqueta <code class="content code">&lt;video&gt</code> en HTML 
+                  es una herramienta poderosa que te permite insertar y reproducir videos 
+                  directamente en una página web. En esencia, es el reproductor de video 
+                  incorporado en tu sitio, lo que significa que los visitantes pueden ver 
+                  el contenido sin salir de la página.
+                </p>
+                <p>
+                  Vamos a sumergirnos en algunos elementos fundamentales de HTML
+                  que te permitirán comenzar a construir tu primera página web:
+                </p>
+                <h2 id="sintaxisbasica" class="scrollable ">Sintaxis Basica</h2>
+                <p>
+                  Comienzas usando la etiqueta <code class="content code">&lt;video&gt;</code> para 
+                  crear un área en la que el video se mostrará en tu página web. Puedes configurar 
+                  aspectos como el tamaño y los controles del reproductor utilizando atributos.
+                </p>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Atributo</th>
+                      <th>Descripción</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>src</td>
+                      <td>Archivo o URL del video a reproducir. Obligatoria si no tiene etiquetas dentro.</td>
+                    </tr>
+                    <tr>
+                      <td>width</td>
+                      <td>Indica el tamaño de ancho del video.</td>
+                    </tr>
+                    <tr>
+                      <td>height</td>
+                      <td>Indica el tamaño de alto del video.</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p>
+                  Un primer ejemplo muy básico para colocar un video en nuestra página web 
+                  podría ser el siguiente:
+                </p>
+                <pre><code>&lt;video src="video.mp4" width="640" height="480"&gt;&lt;/video&gt;</code></pre>
+               
+                <p>
+                  Indicar los valores de ancho y alto en el HTML es una buena práctica, porque 
+                  reservamos el tamaño inicialmente aunque el video no se haya descargado, y 
+                  así evitamos posibles saltos o cambios de tamaño que desembocan en 
+                  comportamientos molestos e inesperados al cargar una web.
+                </p>
+
+                <blockquote class="blockquote blockquote--bordered" cite="https://developer.mozilla.org/es/docs/Web/HTML/Element/video">
+                  <strong>Ojo:</strong> Si lo que quieres es insertar videos desde <strong>Youtube</strong>, <strong>Vimeo</strong> u otro servicio alternativo, debes utilizar la etiqueta HTML <code class="content code">&lt;iframe&gt;</code> en lugar de la etiqueta <code class="content code">&lt;video&gt;</code>. Esta última sólo sirve para archivos en formato de video directamente (.mp4, .ogv, .webm, etc)
+                </blockquote>
+
+                <h2 id="atributos" class="scrollable ">Atributos de control</h2>
+                <ul>
+                  <li><strong>autoplay -&gt; </strong>Comienza a reproducir el video automáticamente. 
+                  </li>
+                  <li><strong>loop -&gt; </strong>Vuelve a iniciar el video cuando finaliza su reproducción (en bucle).
+                  </li>
+                  <li>
+                    <strong>muted -&gt; </strong>Establece que el video se reproduzca con sonido muteado (silenciado).
+                  </li>
+                  <li>
+                    <strong>controls -&gt; </strong>Muestra los controles de reproducción (por defecto no se muestran).
+                  </li>
+                  <li>
+                    <strong>preload -&gt; </strong> Controla cómo y cuándo se carga el video. Los valores pueden ser "auto" (carga cuando la página se carga), "metadata" (carga solo la información del video) o "none" (no carga hasta que el usuario haga clic para reproducir).
+                  </li>
+                  <li>
+                    <strong>poster -&gt; </strong> Define una imagen de portada que se muestra antes de que el video se reproduzca. Ayuda a dar una vista previa visual del contenido del video.
+                  </li>
+                </ul>
+                <p>
+                  Veamos un sencillo ejemplo aplicado:
+                </p>
+                <pre><code>&lt;video&gt; src="video.mp4" autoplay muted loop>&lt;/video&gt;</code></pre>
+                <p>
+                  Este video se reproducirá automáticamente, silenciado y en modo bucle, es decir, cuando llegue al final, comenzará a reproducirse de nuevo. Ten en cuenta que un video <strong>.mp4</strong> que no tenga el atributo controls, por norma general, el usuario lo interpretará como si fuera una <strong>imagen</strong> o <strong>.gif animado</strong>. Si no ve claramente que hay una barra de controles, no caerá en que se trata de un video.
+                </p>
+                <div class="video">
+                  <video src="/assets/video/video-wilder.mp4" width="841" height="493" type="video/mp4" controls autoplay muted loop>Su navegador no soporta contenido multimedia</video>
+                </div>
+
+                <h3>Explora la Etiqueta &lt;video&gt; en HTML</h3>
+                <p>
+                  Con la etiqueta <code class="content code">&lt;video&gt;</code>, incorpora contenido audiovisual a tu página web. Controla la reproducción, tamaño y diseño del reproductor. Eleva la experiencia de tus visitantes con videos interactivos y atractivos 
+                </p>
+
+                <h3 id="audio" class="scrollable ">
+                  Resumen de la etiqueta &lt;video&gt; en audio 😉
+                </h3>
+                <br>
+                <audio controls>
+                  <source src="https://slim1982.s3.us-east-2.amazonaws.com/Wilder.wav" type="audio/mp3">
+                  Tu navegador no soporta audio HTML5.
+                </audio>
+                
+                <div class="back-to-top__sticky">
+                  <div class="back-to-top__1">
+                    <a class="back-to-top" href="#article">
+                      <svg
+                        xmlns="http:www.we.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                      >
+                        <path
+                          d="M15 12.5L10 7.5L5 12.5"
+                          stroke="#171717"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      top</a
+                    >
+                  </div>
+                </div>
+            </article>
+        
+          </div>
+        </div>
+      </main>
+
+      <footer class="container footer">
+        <ul class="footer-links">
+          <li><a href="">Link 1</a></li>
+          <li><a href="">Link 2</a></li>
+          <li><a href="">Link 3</a></li>
+          <li><a href="">Link 4</a></li>
+          <li><a href="">Link 5</a></li>
+        </ul>
+        <ul class="social-links">
+          <li>
+            <a href="https://www.facebook.com/" target="_blank">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="facebook">
+                  <path
+                    id="Vector"
+                    d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/" target="_blank">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="linkedin">
+                  <path
+                    id="Vector"
+                    d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector_2"
+                    d="M6 9H2V21H6V9Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector_3"
+                    d="M4 6C5.10457 6 6 5.10457 6 4C6 2.89543 5.10457 2 4 2C2.89543 2 2 2.89543 2 4C2 5.10457 2.89543 6 4 6Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.twitter.com/" target="_blank">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="twitter">
+                  <path
+                    id="Vector"
+                    d="M22 4.00002C22 4.00002 21.3 6.10002 20 7.40002C21.6 17.4 10.6 24.7 2 19C4.2 19.1 6.4 18.4 8 17C3 15.5 0.5 9.60002 3 5.00002C5.2 7.60002 8.6 9.10002 12 9.00002C11.1 4.80002 16 2.40002 19 5.20002C20.1 5.20002 22 4.00002 22 4.00002Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.github.com/" target="_blank">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="github">
+                  <path
+                    id="Vector"
+                    d="M15 22V18C15.1392 16.7473 14.78 15.4901 14 14.5C17 14.5 20 12.5 20 9C20.08 7.75 19.73 6.52 19 5.5C19.28 4.35 19.28 3.15 19 2C19 2 18 2 16 3.5C13.36 3 10.64 3 8.00004 3.5C6.00004 2 5.00004 2 5.00004 2C4.70004 3.15 4.70004 4.35 5.00004 5.5C4.27191 6.51588 3.91851 7.75279 4.00004 9C4.00004 12.5 7.00004 14.5 10 14.5C9.61004 14.99 9.32004 15.55 9.15004 16.15C8.98004 16.75 8.93004 17.38 9.00004 18V22"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector_2"
+                    d="M9 18C4.49 20 4 16 2 16"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <small class="footer__text"
+          >&copy; 2023 Codificable - Todos los derechos reservados</small
+        >
+      </footer>
+    </div>
+  </body>
+</html>
+

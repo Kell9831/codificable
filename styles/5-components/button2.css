@@ -1,0 +1,89 @@
+/* Button */
+
+/* Default (primary) */
+
+.button2 {
+    display: flex;
+    padding: var(--spacing-2) var(--spacing-4);
+    height: 40px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    gap: var(--spacing-2);
+    border: 1px solid transparent;
+    border-radius: var(--rounded-md);
+    background-color: var(--primary);
+    cursor: pointer;
+    
+    font-size: var(--font-sm);
+    color: var(--primary-foreground);
+    line-height: var(--leading-5);
+    font-weight: 500;
+    animation: crecerYReducir 0.5s;
+  }
+  
+  .button2:hover {
+    background-color: var(--primary-hover);
+  }
+  
+  .button2:active {
+    background-color: var(--primary-active);
+  }
+  
+  .button2:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+    user-select: none;
+  }
+  
+  /* Secondary */
+  
+  .button2--secondary {
+    background-color: var(--secondary);
+    color: var(--secondary-foreground);
+  }
+  
+  .button2--secondary:hover {
+    background-color: var(--secondary-hover);
+  }
+  
+  .button2--secondary:active {
+    background-color: var(--secondary-active);
+  }
+  
+  /* Outline */
+  
+  .button2--outline {
+    border-color: var(--border);
+    background-color: var(--background);
+    color: var(--secondary-foreground);
+  }
+  
+  .button2--outline:hover {
+    background-color: var(--background-hover);
+  }
+  
+  .button2--outline:active {
+    background-color: var(--background-active);
+  }
+  
+  /* Sizes */
+  
+  .button2--sm {
+    height: 2.25rem;
+    padding: var(--spacing-2) var(--spacing-3);
+  }
+  
+  .button2--lg {
+    height: 2.75rem;
+    padding: var(--spacing-2) var(--spacing-8);
+  }
+  
+  .button2--icon {
+    height: 2.5rem;
+    width: 2.5rem;
+    padding: 0;
+  }
+  

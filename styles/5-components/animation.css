@@ -1,0 +1,128 @@
+/*left*/
+@keyframes deslizar-entrada-X {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0%;
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+/*right*/
+@keyframes deslizar-entradaX {
+  from {
+    transform: translateX(100%);
+    opacity: 0%;
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+/*-y*/
+/* @keyframes deslizar-entrada-Y {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+} */
+
+/* victor vr */
+@keyframes deslizar-entrada-Y {
+  from {
+    transform: translateY(100%);
+    opacity: 0%;
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes deslizar-entradaY {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0%;
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes crecerYReducir {
+  0% {
+    transform: scale(1); /* Tamaño original */
+  }
+  50% {
+    transform: scale(1.2); /* Tamaño aumentado al 50% de la animación */
+  }
+  100% {
+    transform: scale(
+      1
+    ); /* Vuelve al tamaño original al final de la animación */
+  }
+}
+
+.scrollable{
+ scroll-margin: 90px;
+}
+
+/*repeticiones*/
+@keyframes deslizar-rep {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes deslizamientoDerToc {
+  0% {
+    opacity: 0%;
+    transform: translateX(-5rem) scale(0.7);
+  }
+
+  100% {
+    opacity: 100%;
+    transform: translate();
+  }
+}
+
+@keyframes deslizamientotext {
+  from {
+    opacity: 0%;
+    transform: translateX(-5rem) scale(0.7);
+  }
+
+  to {
+    opacity: 3;
+    transform: translate();
+  }
+}
+
+.zoom-wrapper {
+  height: 200px;
+  overflow: hidden;
+  border-radius: 16px;
+}
+.zoom-wrapper img {
+  object-fit: cover;
+  transition: transform 0.8s;
+  height: 100%;
+}
+
+.zoom-wrapper:hover img {
+  transform: scale (1.5);
+}
+
+.content__section {
+  transition: 0.5s;
+  object-fit: cover;
+}
+
+.content__section:hover {
+  transform: scale(1.1);
+}

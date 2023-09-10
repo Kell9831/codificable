@@ -1,0 +1,39 @@
+/* 
+<a href="#" class="link link--branded">
+  Link Text
+  <svg>..</svg>
+</a>
+*/
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--foreground);
+  font-size: var(--font-sm);
+  font-weight: 500;
+  line-height: var(--leading-6);
+  text-decoration: none;
+}
+.link--branded{
+  color: var(--primary);
+}
+.link--branded::before {
+  content: "___________________";
+  position: absolute;
+  height: 2px;
+  transform-origin: 0 50%; 
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.link:hover::before{
+  transform: scaleX(1);
+}
+.svg-container {
+  display: inline-block;
+}
+.link:hover #flecha {
+  transform: translateX(3px); 
+  transition: transform 0.3s ease; 
+}
+

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Codificable - Blog</title>
+    <link rel="stylesheet" href="/styles/index.css" />
+  </head>
+
+<body>
+  <header class="header container">
+    <h1 class="header__logo"><a href="/index.html">Codificable</a></h1>
+    <nav class="header__navigation navigation">
+      <ul>
+        <li><a href="/blog/index.html">Blog</a></li>
+        <li><a href="/sobre-nosotros.html">Sobre nosotros</a></li>
+      </ul>
+    </nav>
+    <div class="header__actions">
+      <button class="button button--sm">Login</button>
+    </div>
+    <button class="header__menu-icon button button--icon button--outline">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        viewBox="0 0 16 16"
+        fill="none"
+      >
+        <path
+          d="M2.66663 8H13.3333M2.66663 4H13.3333M2.66663 12H13.3333"
+          stroke="currentColor"
+          stroke-width="1.33"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
+  </header>
+
+      <main>
+
+          <!-- container -->
+          <div class="container" style="display: flex; width: 872px;">
+                    <!-- toc -->
+        <div class="toc" style="height: fit-content;">
+          <p class="toc__title">En este artículo:</p>
+          <ul class="toc__links">
+
+            <li class="content__section" style="animation: deslizamientoDerToc 1s ease-in .2s; ">
+              <a class="toc__links" href="#v1">Uso de blockquote&lt;/a&gt;</a>
+            </li>
+            <li class="content__section" style="animation: deslizamientoDerToc 1s ease-in .3s;">
+            <a class=" toc__links" href="#v2">Descripcion del codigo</a>
+          </li>
+            <li class="content__section" style="animation: deslizamientoDerToc 1s ease-in .3s;">
+              <a class=" toc__links" href="#v3">Etiqueta &lt;q&gt;</a>
+            </li>
+            <li class="content__section" style="animation: deslizamientoDerToc 1s ease-in .4s;">
+              <a class=" toc__links" href="#v4">Diferencias entre &lt;blockquote&gt; y &lt;pre&gt;</a>
+            </li>
+            <li class="content__section" style="animation: deslizamientoDerToc 1s ease-in .5s;">
+              <a class=" toc__links" href="#v5">Referencia</a>
+            </li>
+          </ul>
+        </div>
+        <!-- article -->
+            <article class="article scrollable " id="article">
+              <header class="article__header">
+                <div class="article-metadata">
+                  <span class="article-metadata__date">26 Julio 2023</span>
+                  <span class="category-tag">Principiante</span>
+                </div>
+                <div class="author">
+                  <img
+                    src="/assets/images/profileV.jpg"
+                    alt="Victor Orozco Avatar"
+                    width="320"
+                    height="480"
+                    class="author__avatar"
+                  />
+                  <div class="author__info">
+                    <strong>Victor Orozco</strong>
+                    <span>Full Stack Web Development - (Training) codeable</span>
+                  </div>
+                </div>
+              </header>
+                    <div class="content">
+                      <h1 id="v1" class="scrollable ">Uso de blockquote</h1>
+                      <figure>
+                        <figcaption>Audio-Blog</figcaption>
+                        <audio controls src="https://docs.google.com/uc?export=download&id=15SC6uYIH9j_oxjsCIZx0lhUU4ad2HPir"></audio>
+                      </figure>        
+                      <p>El elemento HTML &lt;blockquote&gt;, que se 
+                          usa para citar contenido proveniente de otra
+                          fuente.
+                          El texto del bloque puede ser formateado con la etiqueta &lt;cite&gt;.
+                          La etiqueta &lt;q&gt; es usada cuando el autor no quiere darle formato al texto.
+                        En este caso, solo aparecerá una línea en blanco antes y después del citado.
+                      </p>
+                      <div>
+                          <figure style='text-align: center;'><img src="/assets/images/blockquote.png" alt=""><figcaption>Figura 1. Ejemplo de un bloque citado en html</figcaption></figure>
+                          <code>&lt;blockquote cite=&quot;"url-de-la-fuente"&quot;&gt;</br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Cita --&gt;<br/>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&lt;/blockquote&gt;</code>
+                        </div>
+                        <p>blockquote ⬇️</p>
+                        <blockquote class="blockquote" cite="https://developer.mozilla.org/es/docs/Web/HTML/Element/blockquote">
+                          <p>
+                            <em><strong>Nota.</strong></em></a> Recomendamos que las implementaciones de hojas 
+                          de estilo porporcionen un mecanismo para insertar signos de puntuación de citas 
+                          antes y después de una cita delimitada por un BLOCKQUOTE de un modo apropiado según 
+                          el contexto del idioma actual y el grado de anidamiento de las citas.</p>
+                        </blockquote>
+                        </p>
+                      <h2 id="v2" class="scrollable ">Descripcion del codigo</h2>       
+                      <p>
+                        El código comienza con las etiquetas estándar &lt;html&gt;, &lt;head&gt;, &lt;tittle&gt;, etc.
+                        En la etiqueta &lt;body&gt; se da el &lt;header&gt; en la cabecera &lt;h1&gt;.<br>
+                        Se inicia la etiqueta &lt;blockquote&gt;. Todo el texto se separa del otro texto por esta 
+                        etiqueta como se muestra en la salida. Nunca olvides cerrar las etiquetas.
+                      </p>
+                      <p>La etiqueta &lt;blockquote&gt; puede contener uno o más elementos en bloque o script, como:
+                        <ul class="lista">
+                          <li>párrafos</li>
+                          <li>encabezados</li>
+                          <li>listas</li>
+                          <li>imágenes</li>
+                          <li>etc.</li>
+                        </ul>
+                        <h3 id="v3" class="scrollable ">Etiqueta &lt;q&gt;</h3>
+                        <p>La etiqueta &lt;blokquote&gt; tiene un hermano menor: la etiqueta &lt;q&gt;, que sirve para 
+                          citas en línea, es decir, dentro de un párrafo o texto normal. A diferencia de &lt;blockquote&gt;, 
+                          la etiqueta &lt;q&gt; sí entrecomilla los contenidos automáticamente, según el idioma y el 
+                          nivel de anidamiento.</p>
+                          <p>La etiqueta `&lt;q&gt;` en HTML se utiliza para indicar una cita corta en línea. Esta etiqueta se utiliza para citar
+                             texto de otra fuente dentro de un párrafo. Los navegadores suelen agregar comillas antes y después del contenido 
+                             de la etiqueta `&lt;q&gt;`. Por ejemplo, si tienes un miniblog y quieres citar una frase famosa o una línea de un libro, 
+                              puedes usar la etiqueta `&lt;q&gt;` para hacerlo. Aquí hay un ejemplo:```html
+                              &lt;p&gt;Como dijo Albert Einstein: &lt;q&gt;La imaginación es más importante que el conocimiento.&lt;/q&gt;&lt;/p&gt;```Esto se mostraría en el navegador como:
+                              &lt;p&gt;Como dijo Albert Einstein: "La imaginación es más importante que el conocimiento."&lt;/p&gt;
+                            </ol>
+                          </p>
+                          <h3 id="v4" class="scrollable ">Diferencias entre &lt;blockquote&gt; y &lt;pre&gt;</h3>
+                          <ol class="lista">
+                            <li>La etiqueta &lt;blockquote&gt; se utiliza para crear un párrafo citado que se desplaza del texto regular.
+                               Se crea un espacio y aparece como una entidad diferente. El resultado se puede ver en las imágenes.</li>
+
+                            <li>La etiqueta &lt;pre&gt; se utiliza para preservar el formato del texto tal como está escrito en el código.
+                              No elimina ningún salto de línea ni espacio. El resultado se puede ver en las imágenes.</li>
+
+                            <li>La etiqueta &lt;blockquote&gt; puede contener uno o más elementos en bloque o script, como párrafos, 
+                                encabezados, listas, imágenes, etc.</li>
+
+                            <li>La etiqueta &lt;pre&gt; solo puede contener texto o elementos en línea, como enlaces, imágenes, etc.</li>
+
+                            <li>La etiqueta &lt;blockquote&gt; se usa para mostrar texto de otra fuente, como una cita de un libro o un artículo. 
+                              La etiqueta &lt;pre&gt; se usa para mostrar código o texto preformateado, como un fragmento de código o un poema.</li>
+
+                            <li>La etiqueta &lt;blockquote&gt; suele estar acompañada de un elemento <cite> que indica la fuente de la cita.
+                               La etiqueta &lt;pre&gt; no tiene ningún elemento asociado que indique la fuente del texto.</li>
+                          </ol>
+                          <div>
+                            <h4 id="v5" class="scrollable ">Referencia</h4>
+                            <a href="https://developer.mozilla.org/es/docs/Web/HTML/Element/blockquote">developer mozilla</a>
+                           </div>
+                          <h2 class="practica">¡Hora de ponerlo en práctica! <p>(❁´◡`❁) </p></h2>
+                          <p class="practica ">Con estos elementos básicos de HTML, estás listo para comenzar a construir tus propias páginas web.
+                             No te preocupes si al principio parece un poco abrumador, ¡la práctica es la clave para el éxito!</p>
+                     </div>
+                                               <!-- boton -->
+              <div class="back-to-top__sticky">
+                <div class="back-to-top__1">
+                  <a class="back-to-top" href="#article">
+                    <svg
+                      xmlns="http:www.we.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                    >
+                      <path
+                        d="M15 12.5L10 7.5L5 12.5"
+                        stroke="#171717"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    top</a
+                  >
+                </div>
+              </div>
+            </article>
+            
+          </div>
+
+        </div>
+      </main>
+
+
+    <footer class="container footer">
+        <ul class="social-links">
+          <li>
+            <a href="#"
+              ><img src="/assets/icons/facebook.svg" alt="Facebook icon"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="/assets/icons/linkedin.svg" alt="LinkedIn icon"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="/assets/icons/twitter.svg" alt="Twitter icon"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="/assets/icons/github.svg" alt="GitHub icon"
+            /></a>
+          </li>
+        </ul>
+        <small>&copy; 2023 Codificable - Todos los derechos reservados</small>
+      </footer>
+    
+</body>
+</html>

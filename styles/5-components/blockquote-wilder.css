@@ -1,0 +1,13 @@
+.blockquote {
+  max-width: 600px;
+  margin: 10px 0 10px 45px;
+  padding: 15px;
+  background: #f8fffe;
+  border: 1px solid #b0d2cb;
+  color: #0b4237;
+  box-sizing: border-box;
+}
+
+.blockquote--bordered {
+  border-left-width: 10px;
+}

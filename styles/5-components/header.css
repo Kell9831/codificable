@@ -1,0 +1,64 @@
+/*
+<header class="header container">
+  <h1 class="header__logo"><a href="">Logo</a></h1>
+  <nav class="header__navigation navigation">...</nav>
+  <div class="header__actions">...</div>
+  <button class="header__menu-icon button button--icon button--outline">
+    <svg>...</svg>
+  </button>
+</header>
+*/
+
+.header {
+  width: 100%;
+  height: var(--spacing-24);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  position: sticky;
+  top:0;
+  background-color: var(--background);
+  z-index: 1000;
+
+ 
+}
+
+
+.header__logo {
+  color: var(--violet-800);
+  font-family: var(--display);
+  font-size: var(--font-3xl);
+  font-weight: 500;
+  line-height: var(--leading-none);
+}
+
+.header__logo a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.header__logo a:hover {
+  color: var(--primary-hover);
+}
+
+.header__navigation {
+  display: none;
+  flex-grow: 1;
+}
+
+.header__actions {
+  display: none;
+}
+
+@media (min-width: 40rem) {
+  .header__navigation,
+  .header__actions {
+    display: block;
+  }
+
+  .header__menu-icon {
+    display: none;
+  }
+}

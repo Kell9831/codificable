@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Codificable</title>
+    <link rel="stylesheet" href="/styles/index.css" />
+  </head>
+
+  <body>
+    <div class="pancake-stack">
+      <header class="header container">
+        <h1 class="header__logo"><a href="/index.html">Codificable</a></h1>
+        <nav class="header__navigation navigation">
+          <ul>
+            <li><a href="/blog/index.html">Blog</a></li>
+
+            <li><a href="/sobre-nosotros.html">Sobre nosotros</a></li>
+          </ul>
+        </nav>
+        <div class="header__actions">
+          <button class="button button--sm">Login</button>
+        </div>
+        <button class="header__menu-icon button button--icon button--outline">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+          >
+            <path
+              d="M2.66663 8H13.3333M2.66663 4H13.3333M2.66663 12H13.3333"
+              stroke="currentColor"
+              stroke-width="1.33"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </header>
+      <main>
+        <section class="section-xl hero3">
+          <div class="container">
+            <div class="hero3__content hero--center">
+              <h2 class="hero3__title">Únete a la comunidad</h2>
+              <p class="hero3__lead">
+                Completa el formulario para iniciar tu proceso de aplicación
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <form action="" method="get">
+          <div class="section-sm form-join">
+            <div class="container">
+              <div class="max-width">
+                <div class="group">
+                  <div class="form-field">
+                    <label class="label" for="username">Nombre*</label>
+                    <input
+                      class="input"
+                      id="username"
+                      name="username"
+                      placeholder="Micaela"
+                    />
+                  </div>
+                  <div class="form-field">
+                    <label class="label" for="fullname">Apellido*</label>
+                    <input
+                      class="input"
+                      name="fullname"
+                      placeholder="Bolognesi"
+                    />
+                  </div>
+                </div>
+
+                <div class="group">
+                  <div class="form-field">
+                    <label class="label" for="email">E-mail*</label>
+                    <input
+                      class="input"
+                      id="email"
+                      name="email"
+                      placeholder="micaela@domain.com"
+                    />
+                  </div>
+                  <div class="form-field">
+                    <label class="label" for="cell">telefono:</label>
+                    <input
+                      class="input"
+                      id="cell"
+                      name="cell"
+                      placeholder="996089285"
+                    />
+                  </div>
+                </div>
+
+                <div class="group">
+                  <div class="form-field">
+                    <label class="label" for="fecha_de_nacimiento">
+                      Fecha de nacimiento:
+                    </label>
+                    <input
+                      class="input"
+                      type="date"
+                      id="fecha_de_nacimiento"
+                      name="fecha_de_nacimiento"
+                    />
+                  </div>
+                  <div class="form-field">
+                    <label class="label" for="cv">Curriculum Vitae</label>
+                    <input
+                      class="input"
+                      id="cv"
+                      name="cv"
+                      type="file"
+                      accept=".pdf"
+                    />
+                  </div>
+                </div>
+
+                <div class="group">
+                  <div class="form-field">
+                    <label class="label" for="pais">Pais de residencia*</label>
+
+                    <select class="input" id="pais" name="pais">
+                      <option value="">Selecciona uno</option>
+                      <option value="AR">Argentina</option>
+                      <option value="BO">Bolivia</option>
+                      <option value="BR">Brasil</option>
+                      <option value="CL">Chile</option>
+                      <option value="CO">Colombia</option>
+                      <option value="CR">Costa Rica</option>
+                      <option value="CU">Cuba</option>
+                      <option value="DO">República Dominicana</option>
+                      <option value="EC">Ecuador</option>
+                      <option value="SV">El Salvador</option>
+                      <option value="GT">Guatemala</option>
+                      <option value="HN">Honduras</option>
+                      <option value="MX">México</option>
+                      <option value="NI">Nicaragua</option>
+                      <option value="PA">Panamá</option>
+                      <option value="PY">Paraguay</option>
+                      <option value="PE">Perú</option>
+                      <option value="PR">Puerto Rico</option>
+                      <option value="UY">Uruguay</option>
+                      <option value="VE">Venezuela</option>
+                    </select>
+                  </div>
+
+                  <div class="form-field">
+                    <label class="label" for="ciu">Ciudad de Residencia:</label>
+                    <input class="input" id="ciu" name="ciu" />
+                  </div>
+                </div>
+
+                <div class="group__dos">
+                  <label class="label" for="direction"
+                    >Direccion de Residencia</label
+                  >
+                  <input
+                    class="input"
+                    id="direction"
+                    name="direction"
+                    placeholder="micaela"
+                  />
+                </div>
+                <div class="group__dos">
+                  <p>Experiencia Profesional*</p>
+                  <ul class="radio-group">
+                    <li class="radio-item">
+                      <input
+                        class=""
+                        type="radio"
+                        name="años"
+                        value="sin exp"
+                      /><label>Sin experiencia</label>
+                    </li>
+                    <li class="radio-item">
+                      <input type="radio" name="años" value="menos de 1" />
+                      <label>Menos de 1 año</label>
+                    </li>
+                    <li class="radio-item">
+                      <input
+                        type="radio"
+                        name="años"
+                        value="entre 1 y 2"
+                      /><label>Entre 1 y 2 años</label>
+                    </li>
+                    <li class="radio-item">
+                      <input type="radio" name="años" value="entre 2 y 5" />
+                      <label> Entre 2 y 5 años</label>
+                    </li>
+                    <li class="radio-item">
+                      <input type="radio" name="años" value="mas de 5" />
+                      <label> Mas de 5 años</label>
+                    </li>
+                  </ul>
+                </div>
+                <div class="group__dos">
+                  <legend>Tecnologias que has manejado</legend>
+                  <ul class="checkbox-group">
+                    <li class="checkbox-item">
+                      <input type="checkbox" name="html" value="si" />
+                      <label> HTML y CSS</label>
+                    </li>
+                    <li class="checkbox-item">
+                      <input type="checkbox" name="js" value="si" /><label
+                        >JavaScript</label
+                      >
+                    </li>
+                    <li class="checkbox-item">
+                      <input type="checkbox" name="express" value="si" /><label
+                        >Tyscrip</label
+                      >
+                    </li>
+                    <li class="checkbox-item">
+                      <input type="checkbox" name="node" value="si" /><label
+                        >Node.js</label
+                      >
+                    </li>
+                    <li class="checkbox-item">
+                      <input type="checkbox" name="react" value="si" /><label
+                        >React</label
+                      >
+                    </li>
+                  </ul>
+                  <p class="forms-field__help">Marca todas las que aplique</p>
+                </div>
+
+                <div class="hero3__actions">
+                  <button class="button2">Iniciar aplicación</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </main>
+
+      <footer class="container footer">
+        <ul class="footer-links">
+          <li><a href="">Link 1</a></li>
+          <li><a href="">Link 2</a></li>
+          <li><a href="">Link 3</a></li>
+          <li><a href="">Link 4</a></li>
+          <li><a href="">Link 5</a></li>
+        </ul>
+        <ul class="social-links">
+          <li>
+            <a href="https://www.facebook.com/" target="_blank">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="facebook">
+                  <path
+                    id="Vector"
+                    d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/" target="_blank">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="linkedin">
+                  <path
+                    id="Vector"
+                    d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector_2"
+                    d="M6 9H2V21H6V9Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector_3"
+                    d="M4 6C5.10457 6 6 5.10457 6 4C6 2.89543 5.10457 2 4 2C2.89543 2 2 2.89543 2 4C2 5.10457 2.89543 6 4 6Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.twitter.com/" target="_blank">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="twitter">
+                  <path
+                    id="Vector"
+                    d="M22 4.00002C22 4.00002 21.3 6.10002 20 7.40002C21.6 17.4 10.6 24.7 2 19C4.2 19.1 6.4 18.4 8 17C3 15.5 0.5 9.60002 3 5.00002C5.2 7.60002 8.6 9.10002 12 9.00002C11.1 4.80002 16 2.40002 19 5.20002C20.1 5.20002 22 4.00002 22 4.00002Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.github.com/" target="_blank">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="github">
+                  <path
+                    id="Vector"
+                    d="M15 22V18C15.1392 16.7473 14.78 15.4901 14 14.5C17 14.5 20 12.5 20 9C20.08 7.75 19.73 6.52 19 5.5C19.28 4.35 19.28 3.15 19 2C19 2 18 2 16 3.5C13.36 3 10.64 3 8.00004 3.5C6.00004 2 5.00004 2 5.00004 2C4.70004 3.15 4.70004 4.35 5.00004 5.5C4.27191 6.51588 3.91851 7.75279 4.00004 9C4.00004 12.5 7.00004 14.5 10 14.5C9.61004 14.99 9.32004 15.55 9.15004 16.15C8.98004 16.75 8.93004 17.38 9.00004 18V22"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector_2"
+                    d="M9 18C4.49 20 4 16 2 16"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <small class="footer__text"
+          >&copy; 2023 Codificable - Todos los derechos reservados</small
+        >
+      </footer>
+    </div>
+  </body>
+</html>

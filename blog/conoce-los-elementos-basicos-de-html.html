@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Codificable - Blog: Conoce los elementos básicos de HTML</title>
+    <link rel="stylesheet" href="/styles/index.css" />
+  </head>
+  <body>
+    <div class="pancake-stack">
+      <header class="header container">
+        <h1 class="header__logo"><a href="/index.html">Codificable</a></h1>
+        <nav class="header__navigation navigation">
+          <ul>
+            <li><a href="/blog/index.html">Blog</a></li>
+            <li><a href="#">Sobre nosotros</a></li>
+          </ul>
+        </nav>
+        <div class="header__actions">
+          <button class="button button--sm">Login</button>
+        </div>
+        <button class="header__menu-icon button button--icon button--outline">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+          >
+            <path
+              d="M2.66663 8H13.3333M2.66663 4H13.3333M2.66663 12H13.3333"
+              stroke="currentColor"
+              stroke-width="1.33"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </header>
+
+      <main>
+        <div class="section">
+          <div class="container2">
+            <!-- indice -->
+            <div class="toc">
+              <p class="toc__title">En este artículo:</p>
+              <ul class="toc__links">
+                <li
+                  class="content__section"
+                  style="animation: deslizamientoDerToc 1s ease-in 0.2s"
+                >
+                  <a class="toc__links" href="#html">¿Qué es HTML?</a>
+                </li>
+                <li
+                  class="content__section"
+                  style="animation: deslizamientoDerToc 1s ease-in 0.3s"
+                >
+                  <a class="toc__links" href="#etiqueta"
+                    >Etiquetas y Elementos</a
+                  >
+                </li>
+                <li
+                  class="content__section"
+                  style="animation: deslizamientoDerToc 1s ease-in 0.4s"
+                >
+                  <a class="toc__links" href="#propdis"
+                    >Propiedad display y atributos esenciales</a
+                  >
+                </li>
+                <li
+                  class="content__section"
+                  style="animation: deslizamientoDerToc 1s ease-in 0.5s"
+                >
+                  <a class="toc__links" href="#horaprac"
+                    >¡Hora de ponerlo en práctica!</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <article class="article scrollable " id="article">
+              <header class="article__header">
+                <div class="article-metadata">
+                  <span class="article-metadata__date">26 Julio 2023</span>
+                  <span class="article-metadata__tag">Principiante</span>
+                </div>
+                <div class="author">
+                  <img
+                    src="/assets/images/profile1.jpeg"
+                    alt="Micaela Bolognesi Avatar"
+                    width="320"
+                    height="480"
+                    class="author__avatar"
+                  />
+                  <div class="author__info">
+                    <strong class="author_name">Micaela Bolognesi</strong>
+                    <span>Frontend Developer - Vsale</span>
+                  </div>
+                </div>
+              </header>
+              <div class="content">
+                <h1>Conoce los Elementos Básicos de HTML</h1>
+                <img
+                  class="content__section"
+                  src="/assets/images/meal-photo.jpeg"
+                  alt="Phone taking picture of meal"
+                  width="1344"
+                  height="896"
+                />
+                <p>
+                  Si alguna vez te has preguntado cómo se construyen las páginas
+                  web, estás en el lugar correcto. En este artículo, te
+                  introduciremos a los fundamentos de HTML, el lenguaje de
+                  marcado que da vida a las páginas web. Así que prepárate para
+                  explorar un mundo emocionante y creativo.
+                </p>
+                <h2 id="html" class="scrollable ">¿Qué es HTML?</h2>
+                <p>
+                  HTML, o HyperText Markup Language (Lenguaje de Marcado de
+                  Hipertexto), es el lenguaje esencial para crear contenido en
+                  la web. Con HTML, podemos estructurar una página, añadir
+                  texto, imágenes, enlaces y mucho más. Es como el armazón que
+                  sostiene toda la estructura de tu sitio web.
+                </p>
+                <p>
+                  Vamos a sumergirnos en algunos elementos fundamentales de HTML
+                  que te permitirán comenzar a construir tu primera página web:
+                </p>
+                <h2 id="etiqueta" class="scrollable ">Etiquetas y Elementos</h2>
+                <p>
+                  En HTML, utilizamos etiquetas para definir los diferentes
+                  elementos de una página. Cada etiqueta tiene un significado y
+                  función específicos. Por ejemplo:
+                </p>
+                <ul>
+                  <li><code>&lt;p&gt;</code> - Define un párrafo de texto.</li>
+                  <li>
+                    <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, ...,
+                    <code>&lt;h6&gt;</code> - Define encabezados de diferentes
+                    niveles.
+                  </li>
+                  <li>
+                    <code>&lt;a&gt;</code> - Crea un enlace a otra página o
+                    recurso.
+                  </li>
+                </ul>
+                <h3>Listas</h3>
+                <p>
+                  Las listas son útiles para organizar contenido. Tenemos dos
+                  tipos de listas en HTML:
+                </p>
+                <h4>Lista ordenada</h4>
+                <pre><code>&lt;ol&gt;
+  &lt;li&gt;Primer ítem&lt;/li&gt;
+  &lt;li&gt;Segundo ítem&lt;/li&gt;
+  &lt;li&gt;Tercer ítem&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+                <h4>Lista desordenada</h4>
+                <pre><code>&lt;ul&gt;
+  &lt;li&gt;Primer ítem&lt;/li&gt;
+  &lt;li&gt;Segundo ítem&lt;/li&gt;
+  &lt;li&gt;Tercer ítem&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+                <h3>Imágenes</h3>
+                <p>
+                  Para mostrar imágenes en tu página, utilizamos la etiqueta
+                  <code>&lt;img&gt;</code>. Asegúrate de incluir el atributo
+                  <code>src</code> con la URL de la imagen que deseas mostrar.
+                </p>
+                <pre><code>&lt;img src="imagen.jpg" alt="Descripción de la imagen"&gt;</code></pre>
+                <h2 id="propdis" clas="scrollable ">Propiedad display y atributos esenciales</h2>
+                <p>
+                  La siguiente tabla muestra algunos elementos HTML comunes, su
+                  propiedad <code>display</code> y algunos atributos principales
+                  que pueden ser utilizados con cada elemento.
+                </p>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Elemento</th>
+                      <th>Display</th>
+                      <th>Principales atributos</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>p</td>
+                      <td>block</td>
+                      <td>id, class, style</td>
+                    </tr>
+                    <tr>
+                      <td>h1, h2, ..., h6</td>
+                      <td>block</td>
+                      <td>id, class, style</td>
+                    </tr>
+                    <tr>
+                      <td>img</td>
+                      <td>inline</td>
+                      <td>src, alt, width, height, id, class, style</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <h2 id="horaprac" class="scrollable ">¡Hora de ponerlo en práctica!</h2>
+                <p>
+                  Con estos elementos básicos de HTML, estás listo para comenzar
+                  a
+                  <a href="#">construir tus propias</a> páginas web. No te
+                  preocupes si al principio parece un poco abrumador, ¡la
+                  práctica es la clave para el éxito!
+                </p>
+              </div>
+              <!-- boton -->
+              <div class="back-to-top__sticky">
+                <div class="back-to-top__1">
+                  <a class="back-to-top" href="#article">
+                    <svg
+                      xmlns="http:www.we.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                    >
+                      <path
+                        d="M15 12.5L10 7.5L5 12.5"
+                        stroke="#171717"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    top</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </main>
+
+      <footer class="container footer">
+        <ul class="footer-links">
+          <li><a href="">Link 1</a></li>
+          <li><a href="">Link 2</a></li>
+          <li><a href="">Link 3</a></li>
+          <li><a href="">Link 4</a></li>
+          <li><a href="">Link 5</a></li>
+        </ul>
+        <ul class="social-links">
+          <li>
+            <a href="https://www.facebook.com/" target="_blank">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="facebook">
+                  <path
+                    id="Vector"
+                    d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/" target="_blank">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="linkedin">
+                  <path
+                    id="Vector"
+                    d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector_2"
+                    d="M6 9H2V21H6V9Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector_3"
+                    d="M4 6C5.10457 6 6 5.10457 6 4C6 2.89543 5.10457 2 4 2C2.89543 2 2 2.89543 2 4C2 5.10457 2.89543 6 4 6Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.twitter.com/" target="_blank">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="twitter">
+                  <path
+                    id="Vector"
+                    d="M22 4.00002C22 4.00002 21.3 6.10002 20 7.40002C21.6 17.4 10.6 24.7 2 19C4.2 19.1 6.4 18.4 8 17C3 15.5 0.5 9.60002 3 5.00002C5.2 7.60002 8.6 9.10002 12 9.00002C11.1 4.80002 16 2.40002 19 5.20002C20.1 5.20002 22 4.00002 22 4.00002Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.github.com/" target="_blank">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="github">
+                  <path
+                    id="Vector"
+                    d="M15 22V18C15.1392 16.7473 14.78 15.4901 14 14.5C17 14.5 20 12.5 20 9C20.08 7.75 19.73 6.52 19 5.5C19.28 4.35 19.28 3.15 19 2C19 2 18 2 16 3.5C13.36 3 10.64 3 8.00004 3.5C6.00004 2 5.00004 2 5.00004 2C4.70004 3.15 4.70004 4.35 5.00004 5.5C4.27191 6.51588 3.91851 7.75279 4.00004 9C4.00004 12.5 7.00004 14.5 10 14.5C9.61004 14.99 9.32004 15.55 9.15004 16.15C8.98004 16.75 8.93004 17.38 9.00004 18V22"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector_2"
+                    d="M9 18C4.49 20 4 16 2 16"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <small class="footer__text"
+          >&copy; 2023 Codificable - Todos los derechos reservados</small
+        >
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+.hero3 {
+  padding-block: var(--spacing-12);
+}
+
+.hero3__content {
+  display: grid;
+  gap: var(--spacing-6);
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+
+  /*Animation*/
+  animation: deslizar-entradaY 1000ms;
+  animation-iteration-count: 1;
+  transition: transform 250ms ease-out;
+}
+
+.hero3__title {
+  margin-top: 0;
+  color: hsl(var(--foreground));
+  font-family: var(--display);
+  font-size: var(--font-6xl);
+  font-weight: 600;
+  line-height: 1; /* 100% */
+}
+
+.hero3__lead {
+  font-size: var(--font-lg);
+  line-height: var(--leading-8);
+  color: hsl(var(--muted-foreground));
+}
+
+.hero3__actions {
+  margin-top: 40px;
+  display: inline-flex;
+  width: 672px;
+  gap: 32px;
+}
